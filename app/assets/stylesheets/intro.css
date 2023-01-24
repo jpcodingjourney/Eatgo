@@ -1,0 +1,65 @@
+body {
+  text-align: center;
+  background-color: rgb(229, 213, 177);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.small-image {
+  width: 250px;
+  height: 200px;
+}
+
+.restaurantset {
+  padding-top: 5em;
+}
+
+nav {
+  font-size: 1.2em;
+  background-color: rgb(241, 211, 120);
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.formset {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.form {
+  grid-column: 2 / 2;
+}
+
+.logo {
+  width: 250px;
+  height: 150px;
+}
+
+.cover {
+  max-width: 550px;
+}
+
+.photoset {
+  padding-right: 5em;
+}
+
+.infotag {
+  text-align: left;
+}
+
+.description {
+  font-style: italic;
+}
+
+.keyname {
+  font-weight: bolder;
+  font-size: 2em;
+}
+
+.flex {
+  display: inline-flex;
+  align-content: center;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  gap: 2em;
+}

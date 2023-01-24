@@ -1,0 +1,29 @@
+
+
+<div class="container restaurantset text-center">
+<div class="row align-items-center">
+<div class="col">
+<%= image_tag @restaurant.image, class: "img-fluid" %>
+</div>
+
+
+<ul class="col">
+    <p class="keyname"><%= @restaurant.name %></p>
+    <p class="description"><%= @restaurant.description %></p>
+    <p><strong>Address</strong>: <%= @restaurant.address %></p>
+    <p><strong>Website</strong>: <%= @restaurant.website %></p>
+</ul>
+</div>
+</div>
+
+<br />
+<br />
+<% if @current_user.present? %>
+    <% if @current_user.admin? %>
+<div class="controls">
+    <%= link_to 'Edit restaurant', edit_restaurant_path(@restaurant) %>
+    &nbsp&nbsp
+    <%= link_to 'Delete restaurant', @restaurant, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+</div>
+<% end %>
+    <% end %>

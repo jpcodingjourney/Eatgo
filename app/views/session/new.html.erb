@@ -1,0 +1,18 @@
+<h1>Log in</h1>
+
+<p>
+    <%= flash[:error] %>
+</p>
+
+
+<%= form_tag login_path do %>
+<div class="mb-3">
+    <%= label_tag :email  %>: <br />
+    <%= email_field_tag :email %>
+</div>
+<div class="mb-3">
+    <%= label_tag :password %>: <br />
+    <%= password_field_tag :password %>
+</div>
+    <%= submit_tag "Sign in", class: "btn btn-primary" %>
+<% end %>

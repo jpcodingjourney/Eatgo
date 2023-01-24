@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project1</title>
+    <title>Eatgo</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,23 @@
   </head>
 
   <body>
+    <nav>
+    <%= link_to 'Home', root_path %> &nbsp&nbsp&nbsp
+    <%# <%= link_to 'Restaurants',  %> %>
+      <% if @current_user.present? %>
+        <%= link_to 'My Page', my_page_path unless @current_user.admin? %> &nbsp&nbsp
+          <% if @current_user.admin? %>
+            <%= link_to 'Admin Page', users_path %> &nbsp&nbsp&nbsp&nbsp
+          <% end %>
+            &nbsp<%= link_to "Sign out: #{ @current_user.email }", login_path, :method => 'delete' %> 
+      <% else %>
+            <%= link_to 'Sign up', new_user_path %>
+            &nbsp&nbsp&nbsp
+            <%= link_to 'Sign in', login_path %>
+      <% end %>
+    </nav>
+
+
     <%= yield %>
   </body>
 </html>

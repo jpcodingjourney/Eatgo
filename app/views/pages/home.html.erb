@@ -1,0 +1,35 @@
+<br />
+<%# <h1>Eatgo</h1> %>
+<br /><br />
+
+
+<% cities = City.all %>
+<% categories = Category.all %>
+City: 
+<%= form_tag("/restaurants", :method => 'get') do %>
+  <div class="flex">
+    <% cities.each do |city| %>
+      <div>
+      <%= image_tag city.image, class: "small-image" %>
+      <div>
+        <%= radio_button_tag :city, city.id, :required => true %>
+        <%= label_tag city.name %>
+      </div>
+      </div>
+    <% end %>
+  </div>
+<br />
+<br />
+<br />
+Category: 
+  <div>
+    <% categories.each do |category| %>
+      <%= radio_button_tag :category, category.id, :required => true, :required => true %>
+      <%= label_tag category.name, category.name %>
+    <% end %>
+  </div>
+<br />
+<br />
+<br />
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
