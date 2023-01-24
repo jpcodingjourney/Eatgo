@@ -1,35 +1,35 @@
 <br />
 <%# <h1>Eatgo</h1> %>
-<br /><br />
-
 
 <% cities = City.all %>
 <% categories = Category.all %>
-City: 
+Choose your city: 
+<br />
+
 <%= form_tag("/restaurants", :method => 'get') do %>
-  <div class="flex">
+  <div class="container text-center">
+  <div class="row align-items-center formset">
     <% cities.each do |city| %>
-      <div>
-      <%= image_tag city.image, class: "small-image" %>
-      <div>
-        <%= radio_button_tag :city, city.id, :required => true %>
-        <%= label_tag city.name %>
-      </div>
+      <div class="optionset col-md-4 shadow-none p-3 mb-5 bg-body-tertiary rounded">
+      <%= label_tag do %>
+      <span><%= image_tag city.image, class: "small-image" %>
+      <div><%= radio_button_tag :city, city.id, :required => true %> <%= city.name %></div></span>
+      <% end %>
       </div>
     <% end %>
   </div>
-<br />
-<br />
-<br />
-Category: 
-  <div>
-    <% categories.each do |category| %>
-      <%= radio_button_tag :category, category.id, :required => true, :required => true %>
-      <%= label_tag category.name, category.name %>
-    <% end %>
   </div>
 <br />
+Choose the category: 
 <br />
 <br />
+<% categories.each do |category| %>
+      <%= label_tag do %>
+      <div class="optionset shadow-none p-3 mb-5 bg-body-tertiary rounded"><%= radio_button_tag :category, category.id, :required => true %> <%= category.name %></div>
+      <% end %>
+<% end %>
+ 
+<br />
+
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>

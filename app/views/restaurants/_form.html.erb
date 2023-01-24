@@ -1,33 +1,43 @@
 <%= form_for @restaurant do |f| %>
-<div class="mb-3">
+    <div class="mb-3">
     <%= f.label :name, :required => true %>
     <%= f.text_field :name %>
-</div>
+    </div>
+    
     <div class="mb-3">
     <%= f.label :address %>
     <%= f.text_field :address, :required => true %>
     </div>
-    
+
     <div class="mb-3">
     <%= f.label :description %>
     <%= f.text_field :description %>
     </div>
+
     <div class="mb-3">
     <%= f.label :website %>
     <%= f.url_field :website %>
     </div>
+
     <div class="mb-3">
     <%= f.label :logo %>
     <%= f.url_field :logo, :required => true %>
     </div>
+
     <div class="mb-3">
     <%= f.label :image %>
     <%= f.url_field :image, :required => true %>
-</div>
+    </div>
+
+    <div class="mb-3">
+    <%= f.label :city_id %>
+    <%= f.select :city_id, City.pluck(:name, :id) %>
+    </div>
+
     <div class="mb-3">
     <%= f.label :category_id %>
     <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
-</div>
+    </div>
     
     <%= f.submit %>
 

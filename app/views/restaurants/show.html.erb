@@ -11,7 +11,7 @@
     <p class="keyname"><%= @restaurant.name %></p>
     <p class="description"><%= @restaurant.description %></p>
     <p><strong>Address</strong>: <%= @restaurant.address %></p>
-    <p><strong>Website</strong>: <%= @restaurant.website %></p>
+    <p><strong>Website</strong>: <%= link_to @restaurant.website, @restaurant.website, target: :_blank %></p>
 </ul>
 </div>
 </div>
@@ -21,9 +21,9 @@
 <% if @current_user.present? %>
     <% if @current_user.admin? %>
 <div class="controls">
-    <%= link_to 'Edit restaurant', edit_restaurant_path(@restaurant) %>
-    &nbsp&nbsp
-    <%= link_to 'Delete restaurant', @restaurant, :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
+    <%= link_to 'Edit restaurant', edit_restaurant_path(@restaurant), class: "nav-link optionset" %>
+    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <%= link_to 'Delete restaurant', @restaurant, class: "nav-link optionset", :method => 'delete', :data => {:confirm => 'Are you sure?'} %>
 </div>
 <% end %>
     <% end %>

@@ -11,18 +11,17 @@
 
   <body>
     <nav>
-    <%= link_to 'Home', root_path %> &nbsp&nbsp&nbsp
-    <%# <%= link_to 'Restaurants',  %> %>
-      <% if @current_user.present? %>
-        <%= link_to 'My Page', my_page_path unless @current_user.admin? %> &nbsp&nbsp
+    <%= link_to 'Home', root_path, class: "nav-link" %> &nbsp&nbsp
+    <%= link_to 'Restaurants', display_path, class: "nav-link" %> &nbsp&nbsp
+          <% if @current_user.present? %>
+        <%= link_to 'My Page', my_page_path, class: "nav-link" unless @current_user.admin? %> &nbsp
           <% if @current_user.admin? %>
-            <%= link_to 'Admin Page', users_path %> &nbsp&nbsp&nbsp&nbsp
           <% end %>
-            &nbsp<%= link_to "Sign out: #{ @current_user.email }", login_path, :method => 'delete' %> 
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= link_to "Sign out: #{ @current_user.email }", login_path, :method => 'delete', class: "nav-link" %> 
       <% else %>
-            <%= link_to 'Sign up', new_user_path %>
-            &nbsp&nbsp&nbsp
-            <%= link_to 'Sign in', login_path %>
+            <%= link_to 'Sign up', new_user_path, class: "nav-link" %>
+            &nbsp&nbsp
+            <%= link_to 'Sign in', login_path, class: "nav-link" %>
       <% end %>
     </nav>
 

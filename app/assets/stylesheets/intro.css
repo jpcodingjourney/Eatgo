@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: rgb(229, 213, 177);
+  background-color: rgb(244, 229, 192);
   font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -15,23 +15,38 @@ body {
 
 nav {
   font-size: 1.2em;
-  background-color: rgb(241, 211, 120);
+  background-color: rgb(243, 219, 147);
   padding-top: 1em;
   padding-bottom: 1em;
 }
 
-.formset {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+a:link {
+  text-decoration: none;
 }
 
-.form {
-  grid-column: 2 / 2;
+.nav-link {
+  transition: transform 0.2s;
+  display: inline-flex;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+  color: blanchedalmond;
 }
 
 .logo {
   width: 250px;
   height: 150px;
+}
+
+.logoset {
+  padding-bottom: 5em;
+  transition: transform 0.2s;
+}
+
+.logoset:hover {
+  color: rgb(254, 177, 54);
+  transform: scale(1.1);
 }
 
 .cover {
@@ -55,11 +70,30 @@ nav {
   font-size: 2em;
 }
 
-.flex {
+/* .flex {
   display: inline-flex;
   align-content: center;
   align-self: center;
   align-items: center;
   text-align: center;
   gap: 2em;
+} */
+
+.optionset {
+  transition: transform 0.2s;
+}
+
+.optionset:hover {
+  cursor: pointer;
+  background-color: rgb(242, 240, 188);
+  color: rgb(253, 163, 84);
+  transform: scale(1.2);
+  font-weight: bolder;
+}
+
+.newbutton {
+  align-items: left;
+  align-content: left;
+  justify-items: left;
+  color: rgb(112, 80, 33);
 }

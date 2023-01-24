@@ -2,7 +2,6 @@ class UsersController < ApplicationController
     before_action :check_for_admin, :only => [:index]
     
     def index
-        @user = User.all
     end
 
     def new
@@ -20,6 +19,9 @@ class UsersController < ApplicationController
     end
 
     def my_page
+    end
+
+    def restaurants
     end
 
     private

@@ -1,0 +1,30 @@
+<br />
+
+<% if @current_user.present? %> 
+    <% if @current_user.admin? %>
+<button type="button" class="btn btn-info"><div class="newbutton"><%= link_to "Add restaurant", new_restaurant_path %></div></button>
+    <% end %> 
+<% end %>
+
+<br />
+<br />
+<br />
+<% @cities.each do |city| %>
+<div class="container text-center">
+<h2><%= city.name %></h2>
+<br />
+<br />
+  <div class="row align-items-center">
+    <% city.restaurants.each do |restaurant| %>
+    <div class="col-md-3">
+      <%= link_to restaurant, target: :_blank do %>
+      <div class="logoset">
+        <%= image_tag(restaurant.logo, class: "logo") %>
+        <div><%= restaurant.name %></div>
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>
+<% end %>

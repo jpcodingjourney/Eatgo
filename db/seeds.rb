@@ -50,7 +50,7 @@ r10 = Restaurant.create(:name => 'Butchers Buffet Strathfield', :address => '11 
 r11 = Restaurant.create(:name => 'Esteban', :address => '1 Temperance Ln, Sydney NSW 2000', :description => 'Homemade Mexican cuisine, a tasting menu & cocktails offered in a dark, romantic fine dining spot.', :website => 'https://www.estebanrestaurant.com.au/', :logo => 'https://images.squarespace-cdn.com/content/v1/5ccbac9f7eb88c64ae714009/1566012744871-PWRW0RJ57OZEQV63EPVN/estebantitle.png?format=2500w', :image => 'https://lh3.googleusercontent.com/p/AF1QipMa0ACuEZMDTyn8cEUAliyMH24V-UbD_idx-m0d=s1360-w1360-h1020')
 
 
-# r12 = Restaurant.create(:name => '', :address => '', :description => '', :website => '', :logo => '', :image => '')
+r12 = Restaurant.create(:name => "Ryo's Noodles", :address => '125 Falcon St, Crows Nest NSW 2065', :description => 'Cosy restaurant doling out classic Japanese food like ramen, chicken soup and rice dishes.', :website => 'https://ryosramen.com.au/', :logo => 'https://ryosramen.com.au/img/logos/ryotei_logo_rev.png', :image => 'https://lh3.googleusercontent.com/p/AF1QipOT_p6xHKskngkCvDS0kaSBbABdQlRlim2RKOlD=s1360-w1360-h1020')
 
 
 # r13 = Restaurant.create(:name => '', :address => '', :description => '', :website => '', :logo => '', :image => '')
@@ -92,7 +92,7 @@ puts "#{ Restaurant.count } restaurants created"
 
 # Associations
 puts "Categories and restaurants"
-cg1.restaurants << r4   # Jpananese
+cg1.restaurants << r4 << r12  # Jpananese
 cg2.restaurants << r6   # Thai
 cg3.restaurants << r5   # Chinese
 cg4.restaurants << r7   # Indian
@@ -103,7 +103,7 @@ cg8.restaurants << r1 << r2 << r8   # Western
 cg9.restaurants << r11  # South American
 
 puts "Cities and restaurants"
-c1.restaurants << r1 << r4 << r7 << r8 << r10 << r11  # Sydney
+c1.restaurants << r1 << r4 << r7 << r8 << r10 << r11 << r12 # Sydney
 c2.restaurants << r2 << r5 << r8   # Melbounre
 c3.restaurants << r3 << r6 << r9   # Brisbane
 
