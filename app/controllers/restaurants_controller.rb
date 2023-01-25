@@ -20,12 +20,20 @@ class RestaurantsController < ApplicationController
 
     def show
         @restaurant = Restaurant.find params[:id]
+        client = OpenWeather::Client.new(api_key: "f17ad8ba4bb969b686a122cb8d7671c6")
+        city = City.find(@restaurant.city_id)
+        data = client.current_weather(city: city.name)
+        @description = data["weather"][0]["description"]
+        @temperature = data["main"]["temp"] - 273.15
+       
+        client = GooglePlaces::Client.new(api_key: "AIzaSyBm8X8KWDdXKYPYtcIJ4WS6R99tDNqwwAA")
+        spots = client.spots_by_query(@restaurant.name)
+        rating = spots.first.rating
     end
 
 
     def display
         @cities = City.all
-        
     end
 
     def create

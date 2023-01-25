@@ -3,33 +3,34 @@
 
 <% cities = City.all %>
 <% categories = Category.all %>
-Choose your city: 
-<br />
-
+<p class="text-white">Choose your city: </p>
 <%= form_tag("/restaurants", :method => 'get') do %>
   <div class="container text-center">
-  <div class="row align-items-center formset">
+  <div class="row justify-content-center">
     <% cities.each do |city| %>
-      <div class="optionset col-md-4 shadow-none p-3 mb-5 bg-body-tertiary rounded">
+      <div class="optionset nametag col-md-3 shadow-none p-3 mb-5 bg-body-tertiary rounded">
       <%= label_tag do %>
-      <span><%= image_tag city.image, class: "small-image" %>
-      <div><%= radio_button_tag :city, city.id, :required => true %> <%= city.name %></div></span>
+      <span><%= image_tag city.image, class: "cover" %>
+      <div><%= radio_button_tag :city, city.id, false, :required => true %><%= city.name %></div></span>
       <% end %>
       </div>
     <% end %>
   </div>
   </div>
-<br />
-Choose the category: 
-<br />
-<br />
+<p class="text-white">Choose the category: </p>
+<div class="container">
+        <div class="col-md text-center">
 <% categories.each do |category| %>
       <%= label_tag do %>
-      <div class="optionset shadow-none p-3 mb-5 bg-body-tertiary rounded"><%= radio_button_tag :category, category.id, :required => true %> <%= category.name %></div>
+      <div class="optionset nametag shadow-none p-3 mb-5 bg-body-tertiary rounded"><%= radio_button_tag :category, category.id, false, :required => true %><%= category.name %></div>
       <% end %>
 <% end %>
- 
-<br />
+         </div>
+</div>
 
+<div class="container">
+        <div class="col-md text-center">
   <%= submit_tag "Search", class: "btn btn-primary" %>
+        </div>
+</div>
 <% end %>

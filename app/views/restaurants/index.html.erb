@@ -1,0 +1,17 @@
+<br />
+<br />
+
+<div class="container text-center">
+<div class="row align-items-center">
+<% @restaurants.each do |restaurant| %>
+<div class="col-md-4">
+    <%= link_to restaurant do %>
+    <div>
+        <%= image_tag(restaurant.logo, class: "logo") %>
+       <div><%= restaurant.name %>
+        </div></div>
+    <% end %>
+</div>
+<% end %>
+</div>
+</div>

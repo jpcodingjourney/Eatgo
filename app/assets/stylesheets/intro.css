@@ -1,23 +1,19 @@
 body {
-  text-align: center;
-  background-color: rgb(244, 229, 192);
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-.small-image {
-  width: 250px;
-  height: 200px;
-}
-
-.restaurantset {
-  padding-top: 5em;
+  background-color: rgb(186, 132, 132);
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
 }
 
 nav {
   font-size: 1.2em;
-  background-color: rgb(243, 219, 147);
+  background-color: rgb(255, 202, 43);
   padding-top: 1em;
   padding-bottom: 1em;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
 }
 
 a:link {
@@ -34,6 +30,16 @@ a:link {
   color: blanchedalmond;
 }
 
+.small-image {
+  width: 250px;
+  height: 200px;
+}
+
+.cover {
+  max-width: 250px;
+  height: 200px;
+}
+
 .logo {
   width: 250px;
   height: 150px;
@@ -42,15 +48,12 @@ a:link {
 .logoset {
   padding-bottom: 5em;
   transition: transform 0.2s;
+  color: white;
 }
 
 .logoset:hover {
   color: rgb(254, 177, 54);
   transform: scale(1.1);
-}
-
-.cover {
-  max-width: 550px;
 }
 
 .photoset {
@@ -70,30 +73,45 @@ a:link {
   font-size: 2em;
 }
 
-/* .flex {
-  display: inline-flex;
-  align-content: center;
-  align-self: center;
-  align-items: center;
-  text-align: center;
-  gap: 2em;
-} */
-
 .optionset {
   transition: transform 0.2s;
 }
 
 .optionset:hover {
   cursor: pointer;
-  background-color: rgb(242, 240, 188);
-  color: rgb(253, 163, 84);
+  background-color: rgb(234, 231, 153);
+  color: rgb(220, 139, 68);
   transform: scale(1.2);
   font-weight: bolder;
 }
 
-.newbutton {
-  align-items: left;
-  align-content: left;
-  justify-items: left;
-  color: rgb(112, 80, 33);
+.addbutton {
+  background-color: rgb(203, 76, 76);
+  color: white;
+}
+
+.addbutton:hover {
+  background-color: rgb(203, 76, 76);
+  color: orange;
+}
+
+p {
+  text-align: center;
+  color: black;
+}
+
+.nametag {
+  color: white;
+}
+.nametag:hover {
+  color: orange;
+}
+
+.edit-delete {
+  /* border-color: blueviolet; */
+  /* background-color: rgb(208, 88, 88); */
+}
+
+.edit-delete:hover {
+  resize: vertical;
 }

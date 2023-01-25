@@ -1,17 +1,27 @@
-<br />
+<% unless @current_user.present? %> 
+    <br /><br />
+<% end %>
+<% if @current_user.present? %> 
+    <% unless @current_user.admin? %>
+    <br /><br />
+    <% end %> 
+<% end %> 
 
 <% if @current_user.present? %> 
     <% if @current_user.admin? %>
-<button type="button" class="btn btn-info"><div class="newbutton"><%= link_to "Add restaurant", new_restaurant_path %></div></button>
+<div class="controls">
+<br />
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<%= link_to 'New restaurant', new_restaurant_path(@restaurant), class: "nav-link btn addbutton shadow p-3 mb-5 bg-body-tertiary rounded" %>
+    </div>
     <% end %> 
 <% end %>
 
-<br />
-<br />
-<br />
+
+
 <% @cities.each do |city| %>
 <div class="container text-center">
-<h2><%= city.name %></h2>
+<h2 class="text-black"><%= city.name %></h2>
 <br />
 <br />
   <div class="row align-items-center">
