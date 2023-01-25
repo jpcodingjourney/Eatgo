@@ -26,9 +26,9 @@ class RestaurantsController < ApplicationController
         @description = data["weather"][0]["description"]
         @temperature = data["main"]["temp"] - 273.15
        
-        client = GooglePlaces::Client.new(api_key: "AIzaSyBm8X8KWDdXKYPYtcIJ4WS6R99tDNqwwAA")
-        spots = client.spots_by_query(@restaurant.name)
-        rating = spots.first.rating
+        # client = GooglePlaces::Client.new(api_key: "AIzaSyBm8X8KWDdXKYPYtcIJ4WS6R99tDNqwwAA")
+        # spots = client.spots_by_query(@restaurant.name)
+        # rating = spots.first.rating
     end
 
 
