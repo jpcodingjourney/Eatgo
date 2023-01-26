@@ -11,7 +11,5 @@ Rails.application.routes.draw do
   delete '/login' => 'session#destroy'
 
   get '/my_page' => 'users#my_page'
-
-
-
+  
 end
