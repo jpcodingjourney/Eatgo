@@ -36,7 +36,7 @@ r4 = Restaurant.create(:name => 'Chaco Ramen', :address => '38 Crown St, Darling
 
 r5 = Restaurant.create(:name => 'China Doll', :address => '4/6 Cowper Wharf Roadway, Woolloomooloo NSW 2011', :description => 'Clever pan-Asian menus and seasonal cocktails in a stylish space with outdoor tables and city views.', :website => 'https://chinadoll.com.au/', :logo => 'https://chinadoll.com.au/wp-content/themes/chinadoll/assets/img/logo.png', :image => 'https://lh3.googleusercontent.com/p/AF1QipM6LitRMVak6No34woXq8AXNSL6GCZdNHfiv2e-=s1360-w1360-h1020')
 
-r6 = Restaurant.create(:name => 'Chin Chin', :address => '125 Flinders Ln, Melbourne VIC 3000', :description => 'Relaxed restaurant with an Asian-inspired menu & local art exhibits above a cocktail bar with DJs.', :website => 'https://www.chinchin.melbourne/', :logo => 'https://chinchingogo.wpenginepowered.com/wp-content/themes/chinchin/images/chinchin-horizontal-black.png', :image => 'https://images.squarespace-cdn.com/content/v1/575bf1f9b654f9e1181e9f89/1549235317960-UIMQ6JWS71MUYWA6J0XF/Chin+Chin+Melbourne')
+r6 = Restaurant.create(:name => 'Chin Chin Melbourne', :address => '125 Flinders Ln, Melbourne VIC 3000', :description => 'Relaxed restaurant with an Asian-inspired menu & local art exhibits above a cocktail bar with DJs.', :website => 'https://www.chinchin.melbourne/', :logo => 'https://chinchingogo.wpenginepowered.com/wp-content/themes/chinchin/images/chinchin-horizontal-black.png', :image => 'https://images.squarespace-cdn.com/content/v1/575bf1f9b654f9e1181e9f89/1549235317960-UIMQ6JWS71MUYWA6J0XF/Chin+Chin+Melbourne')
 
 r7 = Restaurant.create(:name => "It's Mirchi Healthy Indian", :address => '284 Given Terrace, Paddington QLD 4064', :description => 'Indian restaurant with colourful decor, offering organic dishes, plus gluten-free and vegan options.', :website => 'https://itsmirchi.com.au/', :logo => 'https://itsmirchi.com.au/wp-content/uploads/Grey-Its-Mirchi-Logo.png', :image => 'https://lh3.googleusercontent.com/p/AF1QipOUByOwQ4n1Y9rjzfKXtFE_xyGBds7MSSX0jA2P=s1360-w1360-h1020')
 
@@ -54,9 +54,9 @@ r13 = Restaurant.create(:name => 'Kenzan Japanese Restaurant', :address => 'Coll
 
 r14 = Restaurant.create(:name => 'Sono Japanese Restaurant Portside Wharf', :address => '39 Hercules St, Hamilton QLD 4007', :description => 'Modern Japanese food, a teppanyaki bar and a sake tasting menu in a refined riverfront space.', :website => 'https://www.sonorestaurant.com.au/portside-wharf/', :logo => 'https://www.sonorestaurant.com.au/wp-content/uploads/2016/08/Sono_Logo.png', :image => 'https://b.zmtcdn.com/data/pictures/9/16590399/0b451a29e02ec290f47cfd33eaec2157.jpg')
 
-r15 = Restaurant.create(:name => 'Longrain Melbourne', :address => '44 Little Bourke St, Melbourne VIC 3000', :description => 'Spacious rustic-chic Southeast Asian restaurant with cocktail bar, communal tables and share dishes.', :website => 'http://longrainmelbourne.com/food/', :logo => 'https://media.scoutjobs.com.au/user-files/258869/20211004_184624-acfe6745', :image => 'https://youimg1.tripcdn.com/target/100q0z000000mo8w09521.jpg')
+r15 = Restaurant.create(:name => 'Longrain Melbourne', :address => '44 Little Bourke St, Melbourne VIC 3000', :description => 'Spacious rustic-chic Southeast Asian restaurant with cocktail bar, communal tables and share dishes.', :website => 'http://longrainmelbourne.com/', :logo => 'https://media.scoutjobs.com.au/user-files/258869/20211004_184624-acfe6745', :image => 'https://youimg1.tripcdn.com/target/100q0z000000mo8w09521.jpg')
 
-r16 = Restaurant.create(:name => 'Thai Pothong Restaurant', :address => '294 King St, Newtown NSW 2042', :description => 'Vibrant joint plating traditional stir fries and curries, with vegan options and a gift shop.', :website => 'https://www.thaipothong.com.au/newtown', :logo => 'https://www.thaipothong.com.au/~pothong/upload/18-2.newtown-thai-pothong.png', :image => 'https://www.thaipothong.com.au/upload/20221107_200130.jpg')
+r16 = Restaurant.create(:name => 'Thai Pothong Restaurant Newtown', :address => '294 King St, Newtown NSW 2042', :description => 'Vibrant joint plating traditional stir fries and curries, with vegan options and a gift shop.', :website => 'https://www.thaipothong.com.au/newtown', :logo => 'https://www.thaipothong.com.au/~pothong/upload/18-2.newtown-thai-pothong.png', :image => 'https://www.thaipothong.com.au/upload/20221107_200130.jpg')
 
 r17 = Restaurant.create(:name => 'Donna Chang', :address => 'shop 3/171 George St, Brisbane City QLD 4000', :description => 'Posh choice plating elevated Cantonese & Sichuan fare, plus cocktails & a robust wine list.', :website => 'https://www.donnachang.com.au/', :logo => 'http://www.spacecubed.com.au/wp-content/uploads/2019/06/DONNACHANGBWLOGO-1024x464.png', :image => 'https://www.donnachang.com.au/wp-content/uploads/2018/10/DC_Private-Dining_IMG-Slider.jpg')
 
@@ -76,11 +76,15 @@ r24 = Restaurant.create(:name => 'QT Kitchen', :address => 'Shop 2/10-12 High St
 
 r25 = Restaurant.create(:name => 'Kepos Street Kitchen', :address => '96 Kepos St, Redfern NSW 2016', :description => 'Cafe classics with a Mediterranean and Middle Eastern twist, served streetside from an open kitchen.', :website => 'https://www.keposstreetkitchen.com.au/', :logo => 'https://images.squarespace-cdn.com/content/v1/580817a39f7456234251c01c/1505703790839-GA98DINJA8A628KC0VWI/Keposstkitchen_logo_white.png?format=1500w', :image => 'https://lh3.googleusercontent.com/p/AF1QipMBQBOSOdS1s2ttvLPCHz2lNDW-ZHUzJ_kgm9va=s1360-w1360-h1020')
 
-r26 = Restaurant.create(:name => 'Maha Restaurant', :address => '21 Bond St, Melbourne VIC 3000', :description => 'Stylish and contemporary setting for creative Middle Eastern fine dining meals by chef Shane Delia.', :website => 'https://www.maharestaurant.com.au/menu', :logo => 'https://images.squarespace-cdn.com/content/v1/5f7282cdbb753e79eb98e679/4ca0975d-6128-4374-8c6a-c7b95c2f23d4/M_LogoGold.png?format=1500w', :image => 'https://images.squarespace-cdn.com/content/v1/5f7282cdbb753e79eb98e679/296249fb-2ef2-4e05-aa70-8c5ca160b2a2/diegoramirez_maha-17.jpg?format=1000w')
+r26 = Restaurant.create(:name => 'Maha Restaurant', :address => '21 Bond St, Melbourne VIC 3000', :description => 'Stylish and contemporary setting for creative Middle Eastern fine dining meals by chef Shane Delia.', :website => 'https://www.maharestaurant.com.au/', :logo => 'https://images.squarespace-cdn.com/content/v1/5f7282cdbb753e79eb98e679/4ca0975d-6128-4374-8c6a-c7b95c2f23d4/M_LogoGold.png?format=1500w', :image => 'https://images.squarespace-cdn.com/content/v1/5f7282cdbb753e79eb98e679/296249fb-2ef2-4e05-aa70-8c5ca160b2a2/diegoramirez_maha-17.jpg?format=1000w')
 
 r27 = Restaurant.create(:name => 'Taco Bill - South Melbourne', :address => 'Mexican standards like enchiladas & tacos in a casual, enduring chain serving margaritas.', :description => '375 Clarendon St, South Melbourne VIC 3205', :website => 'https://www.tacobill.com.au/', :logo => 'https://static.wixstatic.com/media/e72ddc_e1ba0a3b0ce342c0b36bae58f51fee48~mv2.png/v1/fill/w_430,h_260,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MASTER%2520LOGO%2520-%2520TB_edited.png', :image => 'https://www.goodfood.com.au/content/dam/images/g/s/i/6/t/m/image.related.wideLandscape.940x529.gsi6qi.png/1505444403906.jpg')
 
 r28 = Restaurant.create(:name => 'El Camino Cantina Bowen Hills', :address => 'Shop 2/45 King St, Bowen Hills QLD 4000', :description => 'Lively Tex-Mex restaurant with a robust menu of margaritas, tequila & imported beers.', :website => 'https://www.elcaminocantina.com.au/', :logo => 'https://www.elcaminocantina.com.au/wp-content/themes/rockpool-el-camino/_assets/images/elcam-col-01.svg', :image => 'https://lh3.googleusercontent.com/p/AF1QipOrVCV4qjuaDUDNthbusE_ovzQIAG_PZT7QENA=s1360-w1360-h1020')
+
+r29 = Restaurant.create(:name => 'sAme sAme Brisbane', :address => 'Shop AM3 Ada Lane, 46 James St, Fortitude Valley QLD 4006', :description => 'Upscale Thai meals and craft beers on tap in a hip, rustic-chic restaurant with exposed-brick walls.', :website => 'https://samesamerestaurant.com.au/', :logo => 'https://samesamerestaurant.com.au/imgs/logo-home.svg', :image => 'https://images.squarespace-cdn.com/content/v1/5c2c3145cef3729843c9175a/1580102423687-CPW7GI86FMXEVNGR5LRS/12.png')
+
+r30 = Restaurant.create(:name => 'La Vue Waterfront Restaurant', :address => '1/501 Queen St, Brisbane City QLD 4000', :description => 'Sophisticated venue for Modern Australian fare in a light-filled dining room overlooking the river.', :website => 'https://lavuerestaurant.com.au/', :logo => 'https://lavuerestaurant.com.au/wp-content/uploads/2020/01/cropped-rawlogo-e1578610429754.jpg', :image => 'https://theweekendedition.com.au/wp-content/uploads/2014/09/LaVue2crop-1100x550-c-center.jpg')
 
 # r = Restaurant.create(:name => '', :address => '', :description => '', :website => '', :logo => '', :image => '')
 
@@ -90,17 +94,17 @@ puts "#{ Restaurant.count } restaurants created"
 # Associations
 puts "Categories and restaurants"
 cg1.restaurants << r4 << r12 << r13 << r14          # Jpananese
-cg2.restaurants << r6 << r15 << r16         # Thai
+cg2.restaurants << r6 << r15 << r16 << r29        # Thai
 cg3.restaurants << r5 << r17 << r18         # Chinese
 cg4.restaurants << r7 << r19 << r20         # Indian
 cg5.restaurants << r10 << r21 << r22        # Korean
 cg6.restaurants << r9 << r23 << r24         # Vietnamese
 cg7.restaurants << r3 << r25 << r26         # Mediterranean
-cg8.restaurants << r1 << r2 << r8         # Western
+cg8.restaurants << r1 << r2 << r8 << r30        # Western
 cg9.restaurants << r11 << r27 << r28        # Mexican
 
 puts "Cities and restaurants"
 c1.restaurants << r1 << r4 << r5 << r8 << r10 << r11 << r12 << r16 << r20 << r23 << r25           # Sydney
-c2.restaurants << r2 << r6 << r8 << r13 << r15 << r18 << r19 << r21 << r24 << r26 << r27        # Melbounre
-c3.restaurants << r3 << r7 << r9 << r14 << r17 << r22 << r28          # Brisbane
+c2.restaurants << r2 << r6 << r13 << r15 << r18 << r19 << r21 << r24 << r26 << r27        # Melbounre
+c3.restaurants << r3 << r7 << r9 << r14 << r17 << r22 << r28 << r29 << r30       # Brisbane
 

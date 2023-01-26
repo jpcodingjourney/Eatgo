@@ -1,19 +1,33 @@
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    #e6ec8f,
+    #38dcf2,
+    #38dcf2,
+    #51e2f5,
+    #38dcf2,
+    #38dcf2,
+    #e6ec93
+  );
+  z-index: -1;
+}
+
 body {
-  background-color: rgb(186, 132, 132);
   font-family: "Open Sans", sans-serif;
   font-weight: bolder;
 }
 
 nav {
-  font-size: 1.2em;
-  background-color: rgb(255, 202, 43);
+  font-size: 1.4em;
+  font-weight: bolder;
   padding-top: 1em;
   padding-bottom: 1em;
-  align-content: center;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  justify-items: center;
 }
 
 a:link {
@@ -22,6 +36,9 @@ a:link {
 
 .nav-link {
   transition: transform 0.2s;
+}
+
+.adminbutton {
   display: inline-flex;
 }
 
@@ -38,6 +55,11 @@ a:link {
 .cover {
   max-width: 250px;
   height: 200px;
+}
+
+.imageset {
+  width: 500px;
+  height: 350px;
 }
 
 .logo {
@@ -88,11 +110,13 @@ a:link {
 .addbutton {
   background-color: rgb(203, 76, 76);
   color: white;
+  transition: transform 0.2s;
 }
 
 .addbutton:hover {
   background-color: rgb(203, 76, 76);
   color: orange;
+  transform: scale(1.1);
 }
 
 p {
@@ -105,11 +129,6 @@ p {
 }
 .nametag:hover {
   color: orange;
-}
-
-.edit-delete {
-  /* border-color: blueviolet; */
-  /* background-color: rgb(208, 88, 88); */
 }
 
 .edit-delete:hover {

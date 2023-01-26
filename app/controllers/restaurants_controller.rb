@@ -11,7 +11,6 @@ class RestaurantsController < ApplicationController
         @restaurant = Restaurant.find params[:id]
     end
 
-
     def update
         restaurant = Restaurant.find params[:id]
         restaurant.update restaurant_params
@@ -20,17 +19,29 @@ class RestaurantsController < ApplicationController
 
     def show
         @restaurant = Restaurant.find params[:id]
+
+        # OpenWeather API
         client = OpenWeather::Client.new(api_key: "f17ad8ba4bb969b686a122cb8d7671c6")
         city = City.find(@restaurant.city_id)
         data = client.current_weather(city: city.name)
         @description = data["weather"][0]["description"]
         @temperature = data["main"]["temp"] - 273.15
        
-        # client = GooglePlaces::Client.new(api_key: "AIzaSyBm8X8KWDdXKYPYtcIJ4WS6R99tDNqwwAA")
-        # spots = client.spots_by_query(@restaurant.name)
-        # rating = spots.first.rating
-    end
+        # Google Places API
+        client = GooglePlaces::Client.new("AIzaSyBP-kmma36SMH5UuQGsT05SwMUGmMZSNFo")
+        spots = client.spots_by_query(@restaurant.name)
+        @rating = spots.first.rating
 
+        # Restaurant Navigator
+        @previous_restaurant = Restaurant.where(city_id: @restaurant.city_id).where("id < ?", @restaurant.id).last
+        @next_restaurant = Restaurant.where(city_id: @restaurant.city_id).where("id > ?", @restaurant.id).first
+        if @previous_restaurant.nil?
+            @previous_restaurant = Restaurant.where(city_id: @restaurant.city_id).last
+        end
+        if @next_restaurant.nil?
+            @next_restaurant = Restaurant.where(city_id: @restaurant.city_id).first
+        end
+    end
 
     def display
         @cities = City.all

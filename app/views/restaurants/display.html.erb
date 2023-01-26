@@ -11,8 +11,8 @@
     <% if @current_user.admin? %>
 <div class="controls">
 <br />
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<%= link_to 'New restaurant', new_restaurant_path(@restaurant), class: "nav-link btn addbutton shadow p-3 mb-5 bg-body-tertiary rounded" %>
+
+<%= link_to 'New restaurant', new_restaurant_path(@restaurant), class: "userbutton btn addbutton shadow p-3 mb-5 bg-body-tertiary rounded" %>
     </div>
     <% end %> 
 <% end %>
@@ -22,8 +22,6 @@
 <% @cities.each do |city| %>
 <div class="container text-center">
 <h2 class="text-black"><%= city.name %></h2>
-<br />
-<br />
   <div class="row align-items-center">
     <% city.restaurants.each do |restaurant| %>
     <div class="col-md-3">
