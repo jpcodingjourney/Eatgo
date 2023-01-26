@@ -35,7 +35,7 @@ gem 'bootstrap'
 gem 'jquery-rails'
 gem 'open-weather-ruby-client'
 gem 'google_places'
-
+gem 'securerandom'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

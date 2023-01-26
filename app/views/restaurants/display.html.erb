@@ -1,20 +1,14 @@
-<% unless @current_user.present? %> 
-<% end %>
 <% if @current_user.present? %> 
-    <% unless @current_user.admin? %>
-    <% end %> 
-<% end %> 
-<% if @current_user.present? %> 
-    <% if @current_user.admin? %>
-<div class="controls newres">
-<%= link_to 'Add restaurant', new_restaurant_path(@restaurant), class: "userbutton btn addbutton shadow p-3 mb-5 bg-body-tertiary rounded" %>
+  <% if @current_user.admin? %>
+    <div class="controls newres">
+    <%= link_to 'Add restaurant', new_restaurant_path(@restaurant), class: "userbutton btn addbutton shadow p-3 mb-5 bg-body-tertiary rounded" %>
     </div>
-    <% end %> 
-<% end %>
+  <% end %> 
+<% end %> 
 
 <% @cities.each do |city| %>
 <div class="container text-center">
-<h2><strong><%= city.name %></strong></h2>
+  <h2><strong><%= city.name %></strong></h2>
   <div class="row align-items-center">
     <% city.restaurants.each do |restaurant| %>
     <div class="col-md-2">

@@ -19,8 +19,9 @@ class UsersController < ApplicationController
     end
 
     def my_page
+        @code = params[:code]
     end
-
+    
     def restaurants
     end
 

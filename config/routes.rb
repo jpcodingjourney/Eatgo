@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   get '/my_page' => 'users#my_page'
   
+  post '/generate_code', to: 'coupon_codes#generate_code', as: 'generate_code'
+
 end

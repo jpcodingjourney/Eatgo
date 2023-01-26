@@ -1,7 +1,7 @@
 <%= form_for @restaurant do |f| %>
     <div class="col-md-3 edittag">
     <%= f.label :name, :required => true %>:
-    <%= f.text_field :name, class: "form-control", :autofocus => true %>
+    <%= f.text_field :name, class: "form-control", :required => true, :autofocus => true %>
     </div>
 
     <div class="col-mb-3 edittag">
@@ -9,47 +9,39 @@
     <%= f.text_field :address, class: "form-control", :required => true %>
     </div>
     
-
     <div class="col-md-3 edittag">
     <%= f.label :description %>:
     <%= f.text_area :description, class: "form-control", rows:5 %>
     </div>
     
-
     <div class="col-mb-3 edittag">
     <%= f.label :website %>:
     <%= f.url_field :website, class: "form-control" %>
     </div>
     
-
     <div class="col-mb-3 edittag">
     <%= f.label :logo %>:
     <%= f.url_field :logo, class: "form-control", :required => true %>
     </div>
     
-
     <div class="col-mb-3 edittag">
     <%= f.label :image %>:
     <%= f.url_field :image, class: "form-control", :required => true %>
     </div>
     
-
     <div class="col-mb-3 edittag">
     <%= f.label :city_id %>:
-    <%= f.select :city_id, City.pluck(:name, :id) %>
+    <%= f.select :city_id, City.pluck(:name, :id), :required => true %>
     </div>
     
-
     <div class="col-mb-3 edittag">
     <%= f.label :category_id %>:
     <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
     </div>
     
-    
     <div class="container edittag">
-        <div class="col-md text-center">
+    <div class="col-md text-center">
     <%= f.submit %>
     </div>
     </div>
-    
 <% end %>

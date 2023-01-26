@@ -12,11 +12,15 @@ class RestaurantsController < ApplicationController
     end
 
     def update
-        restaurant = Restaurant.find params[:id]
-        restaurant.update restaurant_params
-        redirect_to restaurant
+        @restaurant = Restaurant.find(params[:id])
+        if @restaurant.update(restaurant_params)
+            @restaurant.categories = Category.where(id: params[:restaurant][:category_ids])
+            redirect_to @restaurant
+        else
+            render :edit
+        end
     end
-
+        
     def show
         @restaurant = Restaurant.find params[:id]
 
@@ -48,8 +52,13 @@ class RestaurantsController < ApplicationController
     end
 
     def create
-        restaurant = Restaurant.create restaurant_params
-        redirect_to restaurant
+        @restaurant = Restaurant.new(restaurant_params)
+        if @restaurant.save
+            @restaurant.categories = Category.where(id: params[:restaurant][:category_ids])
+            redirect_to @restaurant
+        else
+            render :new
+        end
     end
 
     def destroy

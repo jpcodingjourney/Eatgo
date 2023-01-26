@@ -1,37 +1,29 @@
-
-
 <div class="container">
-        <div class="col-md text-center">
-        <h1>Sign up</h1>
-
-<% if @user.errors.any? %>
-<ol>
-    <% @user.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-            <% end %>
-</ol>
-<% end %>
-
-
-<%= form_for @user do |f| %>
-<div class="formset">
-<div class="form">
-<div class="mb-3">
-    <%= f.label :email, class: "form-label" %>: <br />
-    <%= f.email_field :email, class: "form-text", :autofocus => true %>
-</div>
-<div class="mb-3">
-    <%= f.label :password, class: "form-label" %>: <br />
-    <%= f.password_field :password, class: "form-text" %>
-</div>
-<div class="mb-3">
-    <%= f.label :password_confirmation, class: "form-label" %>: <br />
-    <%= f.password_field :password_confirmation, class: "form-text" %>
-</div>
-</div>
-</div>
-
-    <%= f.submit 'Sign up!', class: "btn btn-primary" %>
-<% end %>
-</div>
+  <div class="col-md text-center">
+    <h2>Sign up</h2>
+    <% if @user.errors.any? %>
+    <ol>
+      <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <% end %>
+    </ol>
+    <% end %> <%= form_for @user do |f| %>
+    <div class="formset">
+      <div class="form">
+        <div class="mb-3">
+          <%= f.label :email, class: "form-label" %>:
+          <%= f.email_field :email, class: "form-text", :autofocus => true %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :password, class: "form-label" %>:
+          <%= f.password_field :password, class: "form-text" %>
+        </div>
+        <div class="mb-3">
+          <%= f.label :password_confirmation, class: "form-label" %>:
+          <%= f.password_field :password_confirmation, class: "form-text" %>
+        </div>
+      </div>
+    </div>
+    <%= f.submit 'Sign up!', class: "btn btn-primary addbutton" %> <% end %>
+  </div>
 </div>

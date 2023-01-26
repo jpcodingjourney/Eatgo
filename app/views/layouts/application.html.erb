@@ -14,40 +14,36 @@
 
   <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="collapse navbar-collapse container-fluid" id="navbarNav">
-    
-    <ul class="navbar-nav mb-2 mb-lg-0">
-      <li class="nav-item">
-        <%= link_to 'Home', root_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Restaurants', display_path, class: "nav-link" %>
-      </li>
-      <% if @current_user.present? %>
-        <li class="nav-item">
+      <div class="collapse navbar-collapse container-fluid" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0 col-md-5">
+          <li class="nav-item">
+          <%= link_to 'Home', root_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+          <%= link_to 'Restaurants', display_path, class: "nav-link" %>
+          </li>
+            <% if @current_user.present? %>
+          <li class="nav-item">
           <%= link_to "My Page", my_page_path, class: "nav-link" %>
-        </li>
-      <% else %>
-        <li class="nav-item">
+          </li>
+            <% else %>
+          <li class="nav-item">
           <%= link_to "Sign up", new_user_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
+          </li>
+          <li class="nav-item">
           <%= link_to "Sign in", login_path, class: "nav-link" %>
-        </li>
-      <% end %>
-      
-    </ul>
-    <div class="navbar-nav mb-2 mb-lg-0 col-md-2">
-    <% if @current_user.present? %>
-        <li class="nav-item">
+          </li>
+            <% end %>
+        </ul>
+        <div class="navbar-nav mb-2 mb-lg-0 ">
+          <% if @current_user.present? %>
+          <li class="nav-item">
           <%= link_to "Sign out: #{ @current_user.email }", login_path, :method => 'delete', class: "nav-link" %>
-        </li>
+          </li>
         </div>
-      <% end %>
-  </div>
+          <% end %>
+      </div>
 </nav>
-
-
     <%= yield %>
   </body>
 </html>

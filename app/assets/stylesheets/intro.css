@@ -5,22 +5,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    #361103,
-    rgb(213, 196, 181),
-    rgb(213, 196, 181),
-    rgb(213, 196, 181),
-    rgb(213, 196, 181),
-    rgb(213, 196, 181),
-    rgb(213, 196, 181),
-    rgb(213, 196, 181),
-    rgb(213, 196, 181),
-    rgb(213, 196, 181),
-    rgb(213, 196, 181),
-    rgb(213, 196, 181),
-    rgb(213, 196, 181)
-  );
+  background: linear-gradient(to bottom, #1ba098, #deb992, #8fdede, #1ba098);
   z-index: -1;
 }
 
@@ -40,17 +25,51 @@ a:link {
   text-decoration: none;
 }
 
+p {
+  text-align: center;
+  color: #07413d;
+  font-size: 20px;
+  padding-top: 1em;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 255, 255);
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="radio"]:checked {
+  background-color: rgb(255, 255, 255);
+}
+
+h2 {
+  padding-bottom: 1em;
+  color: #045b55;
+}
+
 .nav-link {
   transition: transform 0.2s;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
+  color: blanchedalmond;
 }
 
 .adminbutton {
   display: inline-flex;
 }
 
-.nav-link:hover {
-  transform: scale(1.1);
-  color: blanchedalmond;
+.restaurantset {
+  padding-top: 5em;
+  padding-bottom: 5em;
 }
 
 .small-image {
@@ -77,6 +96,7 @@ a:link {
   padding-left: 8em;
   padding-top: 2em;
 }
+
 .logoset {
   padding-bottom: 5em;
   transition: transform 0.2s;
@@ -84,7 +104,7 @@ a:link {
 }
 
 .logoset:hover {
-  color: rgb(254, 177, 54);
+  color: #1ba098;
   transform: scale(1.1);
 }
 
@@ -102,69 +122,47 @@ a:link {
 
 .keyname {
   font-weight: bolder;
-  font-size: 2em;
+  font-size: 1.8em;
+  color: #024641;
 }
 
 .optionset {
   transition: transform 0.2s;
+  font-size: 18px;
+  color: #1ba098;
 }
 
 .optionset:hover {
   cursor: pointer;
   background-color: rgb(234, 231, 153);
-  color: rgb(220, 139, 68);
   transform: scale(1.2);
   font-weight: bolder;
 }
 
 .addbutton {
-  background-color: rgb(203, 76, 76);
+  background-color: #1da79e;
   color: white;
   transition: transform 0.2s;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .addbutton:hover {
-  background-color: rgb(203, 76, 76);
-  color: orange;
+  background-color: #157e79;
+  color: rgb(255, 255, 255);
   transform: scale(1.1);
 }
 
-p {
-  text-align: center;
-  color: black;
+.searchbutton {
+  margin-top: 3em;
 }
 
 .nametag {
   color: white;
 }
+
 .nametag:hover {
-  color: orange;
-}
-
-.edit-delete:hover {
-  resize: vertical;
-}
-
-input[type="radio"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  border: 2px solid rgb(255, 255, 255);
-  margin-right: 10px;
-  cursor: pointer;
-  position: relative;
-}
-
-input[type="radio"]:checked {
-  background-color: rgb(200, 76, 179);
-}
-
-h2 {
-  padding-bottom: 1em;
-  color: rgb(205, 115, 36);
+  color: rgb(229, 81, 81);
 }
 
 .edittag {
@@ -172,5 +170,19 @@ h2 {
 }
 
 .indextag {
-  padding-top: 1.5em;
+  padding-top: 2em;
+}
+
+.showfont {
+  font-size: 16px;
+  color: #055d57;
+  font-weight: 900;
+}
+
+.information {
+  margin-bottom: -0.5em;
+}
+
+.couponbutton {
+  margin-top: 5em;
 }

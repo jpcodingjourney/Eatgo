@@ -1,20 +1,25 @@
 class CouponCodesController < ApplicationController
-    if coupon_code.valid?
-        render json: { code: code }, status: :ok # return the code to the user
-    else
-        render json: { error: coupon_code.errors.full_messages }, status: :unprocessable_entity # return an error if the code is not valid
+    def generate_code
+      coupon_code = CouponCode.new
+      coupon_code.code = generate_unique_code
+      coupon_code.expires_at = Time.now + 1.week
+      coupon_code.status = "active"
+
+      if coupon_code.save
+        @code = coupon_code.code
+        render 'users/my_page'
+      else
+        render json: { error: coupon_code.errors.full_messages }, status: :unprocessable_entity
+      end
     end
-end
+    
+    private
 
-private
-
-def generate_unique_code
-    # generate a random 10 character code using CAPITAL letters and numbers
-    code = SecureRandom.alphanumeric(10).upcase
-    # check if the code already exists in the database
-    while CouponCode.find_by(code: code)
+    def generate_unique_code
+      code = SecureRandom.alphanumeric(10).upcase
+      while CouponCode.find_by(code: code)
         code = SecureRandom.alphanumeric(10).upcase
+      end
+      code
     end
-    code
-end
 end

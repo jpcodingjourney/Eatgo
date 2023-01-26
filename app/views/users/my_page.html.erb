@@ -1,10 +1,10 @@
 <div class="container">
-        <div class="col-md text-center">
-        <h1>Welcome!</h1>
-<p>Claim your weekly coupon!</p>
-<button>Claim</button>
+  <div class="col-md text-center">
+    <h2>Welcome!</h2>
+    <%= link_to "Coupon Code", generate_code_path, method: :post, class: "btn
+    btn-primary addbutton couponbutton" %>
+  </div>
 </div>
-</div>
-
-
-<%= button_to "Generate Code", coupon_codes_generate_code_path, method: :get, class: "btn btn-primary" %>
+<% if @code %>
+<p>Your weekly coupon code is: <%= @code %></p>
+<% end %>
