@@ -1,24 +1,21 @@
-# README
+# Project Eatgo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Eatgo is a restaurant information website that collects and displays highly rated restaurants in Australia.
 
-Things you may want to cover:
+The project is now available at https://eatgo.herokuapp.com/
 
-* Ruby version
+<br />
+<br />
 
-* System dependencies
+## Project Summary
 
-* Configuration
+Currently, the website covers restaurants in Sydney, Melbourne, and Brisbane. Users can search for restaurants by city name and food category (e.g. Thai, Chinese, Japanese, etc.) and view the results on a dedicated page.
 
-* Database creation
+By clicking on a restaurant, users can access detailed information about the restaurant, including a photo, name, description, address, Google Review score, and current local weather. Users can also create and log into their own accounts to claim coupon codes. Administrators are able to create and edit restaurants, ensuring that the information is up-to-date and accurate.
 
-* Database initialization
+<br />
+<br />
 
-* How to run the test suite
+## Technologies Used:
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The project is built mainly using Ruby on Rails, PostgreSQL, HTML, CSS, and Bootstrap. It also utilizes the Google Places and OpenWeather APIs for data.
