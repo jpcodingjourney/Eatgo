@@ -12,6 +12,7 @@ class CouponCodesController < ApplicationController
         render json: { error: coupon_code.errors.full_messages }, status: :unprocessable_entity
       end
     end
+
     
     private
 
