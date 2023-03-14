@@ -135,8 +135,12 @@ h2 {
 .optionset:hover {
   cursor: pointer;
   background-color: rgb(234, 231, 153);
-  transform: scale(1.2);
   font-weight: bolder;
+}
+
+.citytag {
+  margin-top: -1em;
+  margin-bottom: -3em;
 }
 
 .addbutton {
@@ -151,10 +155,6 @@ h2 {
   background-color: #157e79;
   color: rgb(255, 255, 255);
   transform: scale(1.1);
-}
-
-.searchbutton {
-  margin-top: 3em;
 }
 
 .nametag {

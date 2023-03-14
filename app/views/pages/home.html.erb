@@ -1,7 +1,7 @@
 <p>Choose your city:</p>
 <%= form_tag("/restaurants", :method => 'get') do %>
 <div class="container text-center">
-  <div class="row justify-content-center">
+  <div class="citytag row justify-content-center">
     <% @cities.each do |city| %>
     <div
       class="optionset nametag col-md-3 shadow-none p-3 mb-5 bg-body-tertiary rounded"
