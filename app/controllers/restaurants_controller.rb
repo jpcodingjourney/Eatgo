@@ -45,6 +45,10 @@ class RestaurantsController < ApplicationController
         if @next_restaurant.nil?
             @next_restaurant = Restaurant.where(city_id: @restaurant.city_id).first
         end
+
+        # Show Restaurant's Category
+        @category_name = Category.joins(:restaurants).where('restaurants.id = ?', @restaurant.id).pluck(:name).first
+
     end
 
     def display

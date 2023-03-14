@@ -118,6 +118,7 @@ h2 {
 
 .description {
   font-style: italic;
+  padding-bottom: 1em;
 }
 
 .keyname {
@@ -185,4 +186,8 @@ h2 {
 
 .couponbutton {
   margin-top: 5em;
+}
+
+.selectionbutton {
+  margin-top: -2em;
 }

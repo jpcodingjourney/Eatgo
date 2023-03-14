@@ -5,10 +5,11 @@
       <%= image_tag @restaurant.image, class: "img-fluid imageset" %>
     </div>
 
-    <ul class="col-md-5">
+    <ul class="col-md-5 selectionbutton">
       <p class="keyname"><%= @restaurant.name %></p>
       <p class="description showfont information"><%= @restaurant.description %></p>
       <p class="showfont information"><strong>Address</strong>: <%= @restaurant.address %></p>
+      <p class="showfont information"><strong>Category</strong>: <%= @category_name %> cuisines</p>
       <p class="showfont information"><strong>Google Reivew rating</strong>: <%= @rating %></p>
       <p class="showfont information">
         <strong>Current local weather</strong>: <%= @description %>, <%=
@@ -23,7 +24,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container selectionbutton">
   <div class="col-md text-center">
     <div class="controls">
       <% if @previous_restaurant.present? %> <%= link_to "<",
