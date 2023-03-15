@@ -8,13 +8,13 @@
     <ul class="col-md-5 selectionbutton">
       <p class="keyname"><%= @restaurant.name %></p>
       <p class="description showfont information"><%= @restaurant.description %></p>
-      <p class="showfont information"><strong>Address</strong>: <%= @restaurant.address %></p>
       <p class="showfont information"><strong>Category</strong>: <%= @category_name %> cuisines</p>
       <p class="showfont information"><strong>Google Reivew rating</strong>: <%= @rating %></p>
       <p class="showfont information">
         <strong>Current local weather</strong>: <%= @description %>, <%=
         @temperature.to_i %>°C
       </p>
+      <p class="showfont information"><strong>Address</strong>: <%= @restaurant.address %></p>
       <p class="showfont information">
         <strong>Website</strong>: <%= link_to @restaurant.website,
         @restaurant.website, target: :_blank %>

@@ -107,4 +107,3 @@ puts "Cities and restaurants"
 c1.restaurants << r1 << r4 << r5 << r8 << r32 << r11 << r12 << r16 << r20 << r23 << r25           # Sydney
 c2.restaurants << r2 << r6 << r13 << r15 << r18 << r19 << r21 << r24 << r26 << r27        # Melbounre
 c3.restaurants << r3 << r7 << r9 << r14 << r17 << r22 << r31 << r29 << r30       # Brisbane
-

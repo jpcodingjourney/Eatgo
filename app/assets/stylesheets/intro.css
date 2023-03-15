@@ -195,3 +195,9 @@ h2 {
 .searchbutton {
   margin-top: 1.5em;
 }
+
+@media (min-width: 1500px) {
+  .topmargin {
+    margin-top: 3em;
+  }
+}

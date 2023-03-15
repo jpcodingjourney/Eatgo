@@ -1,6 +1,7 @@
+<div class="topmargin">
 <p>Choose your city:</p>
 <%= form_tag("/restaurants", :method => 'get') do %>
-<div class="container text-center topmarigin">
+<div class="container text-center">
   <div class="citytag row justify-content-center">
     <% @cities.each do |city| %>
     <div
@@ -39,9 +40,9 @@
 
 <div class="container">
   <div class="col-md text-center">
-    <%= submit_tag "Search", class: "btn btn-info addbutton searchbutton" %>
+    <%= submit_tag "Search", class: "btn addbutton searchbutton" %>
   </div>
 </div>
 <% end %>
 </div>
-
+</div>
