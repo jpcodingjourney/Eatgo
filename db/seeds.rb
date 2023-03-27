@@ -25,7 +25,7 @@ puts "#{ Category.count } categories created"
 
 
 Restaurant.destroy_all
-r1 = Restaurant.create(:name => 'The Quay Sydney', :address => 'Upper Level Overseas Passenger Terminal, The Rocks NSW 2000', :description => 'Innovative tasting menus served in a renowned locale featuring views of Sydney Harbour.', :website => 'https://www.quay.com.au/', :logo => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp5D2HL9T3pkUSJ42Kmq_iZIvSSVbCbfGo7rv-eSC3lsa4pp_yFXTm4MGkSBCw4gxfYsY&usqp=CAU', :image => 'https://img.theculturetrip.com/wp-content/uploads/2018/05/view-from-the-quay-dining-room--nikki-to-quay.jpg')
+# r1 = Restaurant.create(:name => 'The Quay Sydney', :address => 'Upper Level Overseas Passenger Terminal, The Rocks NSW 2000', :description => 'Innovative tasting menus served in a renowned locale featuring views of Sydney Harbour.', :website => 'https://www.quay.com.au/', :logo => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp5D2HL9T3pkUSJ42Kmq_iZIvSSVbCbfGo7rv-eSC3lsa4pp_yFXTm4MGkSBCw4gxfYsY&usqp=CAU', :image => 'https://img.theculturetrip.com/wp-content/uploads/2018/05/view-from-the-quay-dining-room--nikki-to-quay.jpg')
 
 r2 = Restaurant.create(:name => 'Tipo 00 Melbourne', :address => '361 Little Bourke St, Melbourne VIC 3000', :description => 'Italian cuisine in an intimate, sophisticated laneway locale with an open kitchen and a marble bar.', :website => 'https://tipo00.com.au/', :logo => 'https://media-cdn.tripadvisor.com/media/photo-s/06/cd/dc/83/tipo-00.jpg', :image => 'https://tipo00.com.au/wp-content/uploads/2017/02/Copy-of-Tipo-000189-FULL-1024x683.jpg')
 
@@ -77,7 +77,7 @@ r25 = Restaurant.create(:name => 'Kepos Street Kitchen', :address => '96 Kepos S
 
 r26 = Restaurant.create(:name => 'Maha Restaurant Melbourne', :address => '21 Bond St, Melbourne VIC 3000', :description => 'Stylish and contemporary setting for creative Middle Eastern fine dining meals by chef Shane Delia.', :website => 'https://www.maharestaurant.com.au/', :logo => 'https://images.squarespace-cdn.com/content/v1/5f7282cdbb753e79eb98e679/4ca0975d-6128-4374-8c6a-c7b95c2f23d4/M_LogoGold.png?format=1500w', :image => 'https://images.squarespace-cdn.com/content/v1/5f7282cdbb753e79eb98e679/296249fb-2ef2-4e05-aa70-8c5ca160b2a2/diegoramirez_maha-17.jpg?format=1000w')
 
-r27 = Restaurant.create(:name => 'Taco Bill - South Melbourne', :address => '375 Clarendon St, South Melbourne VIC 3205', :description => 'Mexican standards like enchiladas & tacos in a casual, enduring chain serving margaritas.', :website => 'https://www.tacobill.com.au/', :logo => 'https://static.wixstatic.com/media/e72ddc_e1ba0a3b0ce342c0b36bae58f51fee48~mv2.png/v1/fill/w_430,h_260,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MASTER%2520LOGO%2520-%2520TB_edited.png', :image => 'https://www.goodfood.com.au/content/dam/images/g/s/i/6/t/m/image.related.wideLandscape.940x529.gsi6qi.png/1505444403906.jpg')
+r27 = Restaurant.create(:name => 'Taco Bill - South Melbourne', :address => '375 Clarendon St, South Melbourne VIC 3205', :description => 'Mexican standards like enchiladas & tacos in a casual, enduring chain serving margaritas.', :website => 'https://www.tacobill.com.au/', :logo => 'https://static.wixstatic.com/media/e72ddc_e1ba0a3b0ce342c0b36bae58f51fee48~mv2.png/v1/fill/w_430,h_260,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/MASTER%2520LOGO%2520-%2520TB_edited.png', :image => 'https://qul.imgix.net/a8420700-05e0-4176-8cac-9c463cdb9797/473322_sld.jpg')
 
 r31 = Restaurant.create(:name => 'El Camino Cantina Bowen Hills', :address => 'Shop 2/45 King St, Bowen Hills QLD 4000', :description => 'Lively Tex-Mex restaurant with a robust menu of margaritas, tequila & imported beers.', :website => 'https://www.elcaminocantina.com.au/', :logo => 'https://www.elcaminocantina.com.au/wp-content/uploads/2022/12/logo.png', :image => 'https://lh3.googleusercontent.com/p/AF1QipOrVCV4qjuaDUDNthbusE_ovzQIAG_PZT7QENA=s1360-w1360-h1020')
 
@@ -100,11 +100,11 @@ cg4.restaurants << r7 << r19 << r20         # Indian
 cg5.restaurants << r32 << r21 << r22        # Korean
 cg6.restaurants << r9 << r23 << r24         # Vietnamese
 cg7.restaurants << r3 << r25 << r26         # Mediterranean
-cg8.restaurants << r1 << r2 << r8 << r30 << r33       # Western
+cg8.restaurants << r2 << r8 << r30 << r33       # Western
 cg9.restaurants << r11 << r27 << r31        # Mexican
 
 
 puts "Cities and restaurants"
-c1.restaurants << r1 << r4 << r5 << r8 << r32 << r11 << r12 << r16 << r20 << r23 << r25 << r33          # Sydney
+c1.restaurants << r4 << r5 << r8 << r32 << r11 << r12 << r16 << r20 << r23 << r25 << r33          # Sydney
 c2.restaurants << r2 << r6 << r13 << r15 << r18 << r19 << r21 << r24 << r26 << r27        # Melbounre
 c3.restaurants << r3 << r7 << r9 << r14 << r17 << r22 << r31 << r29 << r30       # Brisbane
