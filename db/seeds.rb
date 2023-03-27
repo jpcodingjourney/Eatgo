@@ -85,6 +85,7 @@ r29 = Restaurant.create(:name => 'sAme sAme Brisbane', :address => 'Shop AM3 Ada
 
 r30 = Restaurant.create(:name => 'La Vue Waterfront Restaurant', :address => '1/501 Queen St, Brisbane City QLD 4000', :description => 'Sophisticated venue for Modern Australian fare in a light-filled dining room overlooking the river.', :website => 'https://lavuerestaurant.com.au/', :logo => 'https://lavuerestaurant.com.au/wp-content/uploads/2020/01/cropped-rawlogo-e1578610429754.jpg', :image => 'https://theweekendedition.com.au/wp-content/uploads/2014/09/LaVue2crop-1100x550-c-center.jpg')
 
+r33 = Restaurant.create(:name => 'Bennelong Sydney', :address => 'Bennelong Point, Sydney NSW 2000', :description => 'Innovative plates served in a renowned fine dining destination in an iconic setting.', :website => 'https://www.bennelong.com.au/', :logo => 'https://d2s3n99uw51hng.cloudfront.net/static/logo_project_bennelong_white.png(1)', :image => 'https://assets.vogue.com/photos/589208ed7edfa70512d6900c/master/w_2000,h_1333,c_limit/05-bennelong-sydney-best-international-restaurants.jpg')
 # r = Restaurant.create(:name => '', :address => '', :description => '', :website => '', :logo => '', :image => '')
 
 puts "#{ Restaurant.count } restaurants created"
@@ -99,11 +100,11 @@ cg4.restaurants << r7 << r19 << r20         # Indian
 cg5.restaurants << r32 << r21 << r22        # Korean
 cg6.restaurants << r9 << r23 << r24         # Vietnamese
 cg7.restaurants << r3 << r25 << r26         # Mediterranean
-cg8.restaurants << r1 << r2 << r8 << r30        # Western
+cg8.restaurants << r1 << r2 << r8 << r30 << r33       # Western
 cg9.restaurants << r11 << r27 << r31        # Mexican
 
 
 puts "Cities and restaurants"
-c1.restaurants << r1 << r4 << r5 << r8 << r32 << r11 << r12 << r16 << r20 << r23 << r25           # Sydney
+c1.restaurants << r1 << r4 << r5 << r8 << r32 << r11 << r12 << r16 << r20 << r23 << r25 << r33          # Sydney
 c2.restaurants << r2 << r6 << r13 << r15 << r18 << r19 << r21 << r24 << r26 << r27        # Melbounre
 c3.restaurants << r3 << r7 << r9 << r14 << r17 << r22 << r31 << r29 << r30       # Brisbane
