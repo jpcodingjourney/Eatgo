@@ -85,7 +85,7 @@ r29 = Restaurant.create(:name => 'sAme sAme Brisbane', :address => 'Shop AM3 Ada
 
 r30 = Restaurant.create(:name => 'La Vue Waterfront Restaurant', :address => '1/501 Queen St, Brisbane City QLD 4000', :description => 'Sophisticated venue for Modern Australian fare in a light-filled dining room overlooking the river.', :website => 'https://lavuerestaurant.com.au/', :logo => 'https://lavuerestaurant.com.au/wp-content/uploads/2020/01/cropped-rawlogo-e1578610429754.jpg', :image => 'https://theweekendedition.com.au/wp-content/uploads/2014/09/LaVue2crop-1100x550-c-center.jpg')
 
-r33 = Restaurant.create(:name => 'Bennelong Sydney', :address => 'Bennelong Point, Sydney NSW 2000', :description => 'Innovative plates served in a renowned fine dining destination in an iconic setting.', :website => 'https://www.bennelong.com.au/', :logo => 'https://d2s3n99uw51hng.cloudfront.net/static/logo_project_bennelong_white.png(1)', :image => 'https://assets.vogue.com/photos/589208ed7edfa70512d6900c/master/w_2000,h_1333,c_limit/05-bennelong-sydney-best-international-restaurants.jpg')
+r33 = Restaurant.create(:name => 'Bennelong', :address => 'Bennelong Point, Sydney NSW 2000', :description => 'Innovative plates served in a renowned fine dining destination in an iconic setting.', :website => 'https://www.bennelong.com.au/', :logo => 'https://d2s3n99uw51hng.cloudfront.net/static/logo_project_bennelong_white.png(1)', :image => 'https://assets.vogue.com/photos/589208ed7edfa70512d6900c/master/w_2000,h_1333,c_limit/05-bennelong-sydney-best-international-restaurants.jpg')
 # r = Restaurant.create(:name => '', :address => '', :description => '', :website => '', :logo => '', :image => '')
 
 puts "#{ Restaurant.count } restaurants created"
